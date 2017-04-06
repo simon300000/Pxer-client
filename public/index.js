@@ -7,7 +7,7 @@ let app = new Vue({
     computed: {}
 })
 
-let title = new Vue({
+new Vue({
     el: '#title',
     data: {
         title: app
