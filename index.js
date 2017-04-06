@@ -7,7 +7,7 @@ let windowsNumber = 0
 process.on('createNewWindow', () => {
     let window = new BrowserWindow({
         show: false,
-        frame: false
+        frame: true
     })
     window.loadURL(`file://${__dirname}/public/index.html`)
     windowsNumber++
