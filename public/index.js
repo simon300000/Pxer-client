@@ -1,6 +1,15 @@
 let app = new Vue({
     el: '#vue',
-    data: {},
+    data: {
+        title: 'Pxer'
+    },
     method: {},
     computed: {}
+})
+
+let title = new Vue({
+    el: '#title',
+    data: {
+        title: app
+    }
 })
