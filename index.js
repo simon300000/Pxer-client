@@ -5,11 +5,14 @@ const BrowserWindow = electron.BrowserWindow
 let windowsNumber = 0
 
 process.on('createNewWindow', () => {
-    let window = new BrowserWindow({show:false})
+    let window = new BrowserWindow({
+        show: false,
+        frame: false
+    })
     window.loadURL(`file://${__dirname}/public/index.html`)
     windowsNumber++
-    window.on('page-title-updated',()=>{
-      window.show()
+    window.on('page-title-updated', () => {
+        window.show()
     })
     window.on('closed', () => {
         windowsNumber--
