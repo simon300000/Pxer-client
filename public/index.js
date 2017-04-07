@@ -1,10 +1,21 @@
 const electron = require('electron')
 const ipcRenderer = electron.ipcRenderer
 
+const pxer = new Vuex.Store({
+    strict: true,
+    // TODO: 严格模式弄好得删
+    state: {
+        title: 'Pxer'
+    },
+    getters: {},
+    mutations: {},
+    actions: {},
+})
+
+
 let app = new Vue({
     el: '#vue',
     data: {
-        title: 'Pxer',
         panel: 'view',
         aboutPanel: 'version',
         about: {
@@ -18,8 +29,6 @@ let app = new Vue({
 })
 
 new Vue({
-    el: '#title',
-    data: {
-        title: app
-    }
+    el: 'title',
+    store: pxer,
 })

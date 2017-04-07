@@ -26,7 +26,10 @@ process.on('createNewWindow', () => {
     windowsNumber++
     window.loadURL(`file://${__dirname}/public/index.html`)
     window.on('page-title-updated', () => window.show())
-    window.on('closed', () => windowsNumber--)
+    window.on('closed', () => {
+        windowsNumber--
+        window = null
+    })
     window.on('resize', () => db.set('window.size', window.getSize()).write())
     window.on('enter-full-screen', () => db.set('window.fullscreen', true).write())
     window.on('leave-full-screen', () => db.set('window.fullscreen', undefined).write())
