@@ -39,3 +39,7 @@ app.on('activate', () => {
 app.on('will-quit', function() {
     //globalShortcut.unregisterAll();
 });
+
+//┌─┐┬┌┬┐┌─┐┌┐┌ ─┐┌─┐┌─┐┌─┐
+//└─┐│││││ ││││ ─┤│ ││ ││ │
+//└─┘┴┴ ┴└─┘┘└┘ ─┘└─┘└─┘└─┘
