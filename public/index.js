@@ -1,14 +1,16 @@
 const electron = require('electron')
 const ipcRenderer = electron.ipcRenderer
 
-const pxer = new Vuex.Store({
+const title = new Vuex.Store({
     strict: true,
     // TODO: 严格模式弄好得删
-    state: {
-        title: 'Pxer'
-    },
+    state: 'Pxer',
     getters: {},
-    mutations: {},
+    mutations: {
+        set(title, value) {
+            title = value
+        }
+    },
     actions: {},
 })
 
@@ -25,10 +27,11 @@ let app = new Vue({
         }
     },
     method: {},
-    computed: {}
+    computed: {},
+    watch: {}
 })
 
 new Vue({
     el: 'title',
-    store: pxer,
+    store: title,
 })
