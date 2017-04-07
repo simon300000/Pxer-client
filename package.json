@@ -18,5 +18,8 @@
   "homepage": "https://github.com/simon300000/Pxer-client#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+    "lowdb": "^0.16.0"
   }
 }
