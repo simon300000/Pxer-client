@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css.css">
 
 </head>
+<!-- 玄学缩紧，万法退避 -->
 
 <body>
     <div id='vue'>
@@ -28,6 +29,12 @@
                             <div v-on:mousedown="panel = 'about'" v-bind:class="{active: panel == 'about'}" class="nav-group-item"><span class="icon icon-info"></span> 关于</div>
                         </nav>
                     </div>
+                    <template v-if="panel == 'view'">
+                    </template>
+                    <template v-if="panel == 'save'">
+                    </template>
+                    <template v-if="panel == 'config'">
+                    </template>
                     <template v-if="panel == 'about'">
                       <div class="pane">
                         <p>Pxer 客户端</p>
