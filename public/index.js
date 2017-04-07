@@ -4,7 +4,14 @@ const ipcRenderer = electron.ipcRenderer
 let app = new Vue({
     el: '#vue',
     data: {
-        title: 'Pxer'
+        title: 'Pxer',
+        panel: 'view',
+        aboutPanel: 'version',
+        about: {
+            version: process.versions,
+            chrome: process.moduleLoadList,
+            electron: electron.remote.process.moduleLoadList
+        }
     },
     method: {},
     computed: {}
