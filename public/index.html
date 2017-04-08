@@ -9,25 +9,26 @@
 
     <link rel="stylesheet" href="./nprogress/nprogress.css">
     <script src="./nprogress/nprogress.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="./photon/css/photon.css">
+    <link rel="stylesheet" href="./photon/css/photon.u.css">
     <link rel="stylesheet" href="./css.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
 
 </head>
 <!-- 玄学缩进，万法退避 -->
+<!-- 这垃圾HTML锁进 -->
 
 <body>
     <div id='vue'>
-        <div class="window">
-            <div class="window-content">
-                <div class="pane-group">
-                    <div class="pane-xs sidebar">
-                        <nav class="nav-group">
-                            <div v-on:mousedown="panel = 'view'" v-bind:class="{active: panel == 'view'}" class="nav-group-item"><img class="pixiv" src="./pixiv.png" alt="pixiv"> 浏览</div>
-                            <div v-on:mousedown="panel = 'save'" v-bind:class="{active: panel == 'save'}" class="nav-group-item"><span class="icon icon-download"></span> 下载</div>
-                            <h5 class="nav-group-title">设置</h5>
-                            <div v-on:mousedown="panel = 'config'" v-bind:class="{active: panel == 'config'}" class="nav-group-item"><span class="icon icon-cog"></span> 设置</div>
-                            <div v-on:mousedown="panel = 'about'" v-bind:class="{active: panel == 'about'}" class="nav-group-item"><span class="icon icon-info"></span> 关于</div>
+        <div class="photon window">
+            <div class="photon window-content">
+                <div class="photon pane-group">
+                    <div class="photon pane-xs sidebar">
+                        <nav class="photon nav-group">
+                            <div v-on:mousedown="panel = 'view'" v-bind:class="{active: panel == 'view'}" class="photon nav-group-item"><img class="pixiv" src="./pixiv.png" alt="pixiv"> 浏览</div>
+                            <div v-on:mousedown="panel = 'save'" v-bind:class="{active: panel == 'save'}" class="photon nav-group-item"><span class="photon icon icon-download"></span> 下载</div>
+                            <h5 class="photon nav-group-title">设置</h5>
+                            <div v-on:mousedown="panel = 'config'" v-bind:class="{active: panel == 'config'}" class="photon nav-group-item"><span class="photon icon icon-cog"></span> 设置</div>
+                            <div v-on:mousedown="panel = 'about'" v-bind:class="{active: panel == 'about'}" class="photon nav-group-item"><span class="photon icon icon-info"></span> 关于</div>
                         </nav>
                     </div>
                     <template v-if="panel == 'view'">
@@ -37,16 +38,16 @@
                     <template v-if="panel == 'config'">
                     </template>
                     <template v-if="panel == 'about'">
-                      <div class="pane">
+                      <div class="photon pane">
                         <p>Pxer 客户端</p>
                       </div>
-                      <div class="pane">
-                        <div class="tab-group">
-                          <div v-on:mousedown="aboutPanel = 'version'" v-bind:class="{active: aboutPanel == 'version'}" class="tab-item">版本</div>
-                          <div v-on:mousedown="aboutPanel = 'chrome'" v-bind:class="{active: aboutPanel == 'chrome'}" class="tab-item">模块(前端)</div>
-                          <div v-on:mousedown="aboutPanel = 'electron'" v-bind:class="{active: aboutPanel == 'electron'}" class="tab-item">模块(后端)</div>
+                      <div class="photon pane">
+                        <div class="photon tab-group">
+                          <div v-on:mousedown="aboutPanel = 'version'" v-bind:class="{active: aboutPanel == 'version'}" class="photon tab-item">版本</div>
+                          <div v-on:mousedown="aboutPanel = 'chrome'" v-bind:class="{active: aboutPanel == 'chrome'}" class="photon tab-item">模块(前端)</div>
+                          <div v-on:mousedown="aboutPanel = 'electron'" v-bind:class="{active: aboutPanel == 'electron'}" class="photon tab-item">模块(后端)</div>
                         </div>
-                        <table class="table-striped">
+                        <table>
                           <tbody v-for="(item, index) in about[aboutPanel]">
                             <tr v-if="aboutPanel == 'version'">
                               <td>{{index}}</td>
