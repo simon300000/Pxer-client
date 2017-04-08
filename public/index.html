@@ -32,6 +32,17 @@
                         </nav>
                     </div>
                     <template v-if="panel == 'view'">
+                      <div class="d-flex flex-column justify-content-center container-fluid">
+                        <div class="d-flex flex-row justify-content-center container-fluid">
+                          <form class="form-inline">
+                            <div class="form-group mx-sm-3">
+                              <label for="inputPassword2" class="sr-only">Password</label>
+                              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Confirm identity</button>
+                          </form>
+                        </div>
+                      </div>
                     </template>
                     <template v-if="panel == 'save'">
                     </template>
