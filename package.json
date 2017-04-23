@@ -20,6 +20,7 @@
     "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
+    "curl": "^0.1.4",
     "lowdb": "^0.16.0"
   }
 }
