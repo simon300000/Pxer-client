@@ -2,7 +2,7 @@ const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
-const low = require('lowdb');
+const low = require('lowdb')
 const db = low('db.json')
 
 db.defaults({
